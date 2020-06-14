@@ -98,6 +98,7 @@ a {
 .site-nav .link:hover,
 .site-nav .link:focus {
   color: var(--accent-color);
+  cursor: pointer;
 }
 .site-nav .link.current {
   color: var(--accent-color);
@@ -113,10 +114,13 @@ a {
   vertical-align: middle;
 }
 .contact-link {
+  cursor: pointer;
   color: var(--text-color);
   fill: var(--text-color);
 }
-.contact-link:hover {
+.contact-link:hover,
+.contact-link:focus {
+  cursor: pointer;
   color: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -190,6 +194,7 @@ button {
   /* украшения   */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  cursor: pointer;
 }
 .order-service:hover,
 .order-service:focus {
@@ -211,48 +216,6 @@ button {
 .advantages,
 .team {
   width: 270px;
-}
-.social-list {
-  justify-content: space-between;
-  align-items: center;
-  margin-left: 32px;
-  margin-right: 32px;
-  margin-bottom: 24px;
-}
-.social-button {
-  padding: 0;
-  border: none;
-}
-.button-icon:hover {
-  text-decoration: none;
-  border: none;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  align-self: start;
-  font-size: 1.5rem;
-  background-color: #2196f3;
-  color: #fff;
-  border-radius: 50px;
-}
-.social-button {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: #fff;
-  color: #757575;
-}
-.social-icon {
-  width: 22px;
-  height: 22px;
-  fill: currentColor;
-}
-.social-icon:hover {
-  fill: var(--primary-white-color);
-}
-.social-list .social + .social {
-  margin-left: 10px;
 }
 .advantages-list,
 .work-list,
@@ -315,6 +278,30 @@ button {
   background-color: rgba(47, 48, 58, 0.8);
 }
 /*Section Our Team*/
+.social-list {
+  justify-content: center;
+  align-items: center;
+  margin-left: 32px;
+  margin-right: 32px;
+  padding-bottom: 24px;
+}
+.social-button {
+  padding: 0;
+  border: none;
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.social-icon:hover,
+.social-icon:focus {
+  --color1: var(--accent-color);
+  --color2: var(--primary-white-color);
+}
+.social-list .social + .social {
+  margin-left: 10px;
+}
 .team-background {
   background-color: var(--background-button);
 }
@@ -339,7 +326,7 @@ button {
 }
 .section-team .text-team {
   margin-top: 0px;
-  margin-bottom: 28px;
+  margin-bottom: 16px;
   font-weight: 400;
   color: var(--text-color);
 }
@@ -366,6 +353,18 @@ button {
   display: flex;
   width: 100%;
   height: 100%;
+  fill: var(--client-icon);
+  cursor: pointer;
+}
+.client:hover .client-icon,
+.client:focus .client-icon {
+  fill: var(--accent-color);
+  color: var(--accent-color);
+}
+.client-icon {
+  border-style: none;
+  margin: auto;
+  fill: var(--client-icon);
 }
 
 .client-logo {
@@ -379,6 +378,7 @@ button {
 /*Footer*/
 .container.footer {
   display: flex;
+  align-items: baseline;
 }
 .main-footer {
   background-color: var(--background-footer);
